@@ -11,11 +11,12 @@ app.use('/',express.static(path.join(__dirname,'./web/dist')))
 
 
 app.get('/quiz-data', (req, res) => {
-  // res.send('Hello World!')
+  res.send('Hello World!')
   // console.log(req.ip);
   try{
 const data = fs.readFileSync(quizData)
 res.json(JSON.parse(data))
+res.send(data)
   }
 catch(error){
 res.status(500).json({error: "Failed to load data" })
