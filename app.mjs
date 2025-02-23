@@ -10,7 +10,7 @@ console.log(data);
 
 const app = express()
 const port = process.env.PORT|| 3000
-const quizData = "./data.json"
+const quizData =  data //"./data.json"
 
 
 const __dirname = path.resolve()
