@@ -11,7 +11,7 @@ app.use('/',express.static(path.join(__dirname,'./web/dist')))
 
 
 app.get('/quiz-data', (req, res) => {
-  res.send(data)
+  res.send(quizData)
   // console.log(req.ip);
   try{
 const data = fs.readFileSync(quizData)
