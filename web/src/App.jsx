@@ -1,7 +1,7 @@
 
 import './App.css'
 import React from 'react'
-import Quiz from './Component/QuizApp'
+import Quiz from './Component/QuizApp/Quiz'
 function App() {
   
 
