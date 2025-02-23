@@ -1,13 +1,13 @@
 
 import './App.css'
 import React from 'react'
-import Quiz from './Component/QuizApp/Quiz'
+import QuizApp from './Component/QuizApp'
 function App() {
   
 
   return (
     <>
-    <Quiz/>
+    <QuizApp/>
     <p>FRONTEND</p>
     </>
   )
