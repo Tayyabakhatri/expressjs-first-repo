@@ -1,5 +1,9 @@
 import express from 'express'
 import path from "path"
+import fs from "fs";
+import quiz from "./data.json" assert { type: "json" };
+
+console.log(quiz);
 const app = express()
 const port = process.env.PORT|| 3000
 const quizData = "./data.json"
