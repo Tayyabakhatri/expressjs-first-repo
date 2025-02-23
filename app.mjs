@@ -1,9 +1,13 @@
 import express from 'express'
 import path from "path"
 import fs from "fs";
-import quiz from "./data.json" assert { type: "json" };
+import { readFileSync } from "fs";
 
-console.log(quiz);
+// import quiz from "./data.json" assert { type: "json" };
+// console.log(quiz);
+const data = JSON.parse(readFileSync("./data.json", "utf8"));
+console.log(data);
+
 const app = express()
 const port = process.env.PORT|| 3000
 const quizData = "./data.json"
