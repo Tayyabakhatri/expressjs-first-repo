@@ -13,9 +13,10 @@ import { CheckCircle, XCircle } from "lucide-react";
   const [quizData, setQuizData] = useState([]);
 
   React.useEffect(() => {
-    fetch("/api/quiz-data")
+    fetch("http://localhost:3000/quiz-data")
       .then((response) => response.json())
       .then((data) => setQuizData(data))
+      
       .catch((error) => console.error("Error fetching quiz data:", error));
   }, []);
 
