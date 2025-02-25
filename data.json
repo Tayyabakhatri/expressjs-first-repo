@@ -1,6 +1,6 @@
 {
 "quiz-title":"general knowledge",
-"quiz questions":[
+"quizQuestions":[
     {
         "question": "Which sentence is grammatically correct?",
         "options": ["a) She don’t like coffee.", "b) She doesn’t like coffee. ", "c) She isn’t liking coffee.", "d) She not like coffee."],

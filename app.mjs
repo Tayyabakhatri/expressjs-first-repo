@@ -1,35 +1,36 @@
 import express from 'express'
 import path from "path"
 import fs from "fs";
-import { readFileSync } from "fs";
-
-// import quiz from "./data.json" assert { type: "json" };
-// console.log(quiz);
-const data = JSON.parse(readFileSync("./data.json", "utf8"));
-console.log(data);
+import cors from 'cors'
 
 const app = express()
-const port = process.env.PORT|| 3000
-const quizData =  data //"./data.json"
+const port = process.env.PORT || 3000
+
+//read data
+const data = JSON.parse(fs.readFileSync("./data.json", "utf8"));
+console.log(data);
 
 
+app.use(cors())
+
+// Serve frontend (if applicable)
 const __dirname = path.resolve()
-app.use('/',express.static(path.join(__dirname,'./web/dist')))
+app.use('/', express.static(path.join(__dirname, './web/dist')))
 
 
 
 app.get('/quiz-data', (req, res) => {
-  res.send(quizData)
-  // console.log(req.ip);
-  try{
-const data = fs.readFileSync(quizData)
-res.json(JSON.parse(data))
-res.send(data)
+
+  try {
+    // send preloaded JSON data
+    res.send(data)
+    console.log(data);
+
   }
-catch(error){
-res.status(500).json({error: "Failed to load data" })
-}
-  
+  catch (error) {
+    res.status(500).json({ error: "Failed to load data" })
+  }
+
 })
 
 app.listen(port, () => {

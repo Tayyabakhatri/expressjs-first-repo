@@ -8,7 +8,6 @@ function App() {
   return (
     <>
     <QuizApp/>
-    <p>FRONTEND</p>
     </>
   )
 }
