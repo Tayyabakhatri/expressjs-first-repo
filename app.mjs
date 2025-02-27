@@ -25,14 +25,19 @@ app.get('/quiz-data', (req, res) => {
     // send preloaded JSON data
     res.send(data)
     console.log(data);
-
   }
   catch (error) {
     res.status(500).json({ error: "Failed to load data" })
   }
+})
+app.post('/quiz-data', (req, res) => {
+  res.send('hello')
 
 })
-
+  
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+
+

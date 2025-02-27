@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import axios from "axios";
 
 const QuizApp = () => {
@@ -15,21 +15,29 @@ const QuizApp = () => {
   useEffect(() => {
     fetchData();
   }, []);
+  console.log(quizdata);
+  // If quizData is undefined or empty, show a loading message
+  if (!quizdata || quizdata.length === 0) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
-      {quizdata.map(( {question,options},index) => (
-        <div key={index}>
-          <div>{question}</div>
-          <div>{options}</div>
-          {/* <div>
-            <ul>
-              {options.map((options,index) => (
-               <li key={index}>
-                {options}
-               </li>
-              ))}
+      {quizdata.map((item, index) => (
+        <div key={index} >
+          <div>{item.question}</div>
+          
+            <ul key={index}>
+              <li>{item.options}</li>
+            
             </ul>
-          </div> */}
+          
+          {/* <div>
+      <ul>
+        {item.options.map((option, optionIndex) => (
+          <li key={optionIndex}>{option}</li>
+        ))}
+      </ul>
+    </div> */}
         </div>
       ))}
     </>
