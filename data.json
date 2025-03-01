@@ -1,18 +1,21 @@
 {
-"quiz-title":"general knowledge",
-"quizQuestions":[
+  "quiz-title": "general knowledge",
+  "quizQuestions": [
     {
-        "question": "Which sentence is grammatically correct?",
-        "options": ["a) She don’t like coffee.", "b) She doesn’t like coffee. ", "c) She isn’t liking coffee.", "d) She not like coffee."],
-        "answer": "She doesn’t like coffee."
-      },
-      {
-        "question": "Choose the correct past tense form:  'I ______ to the store yesterday.'",
-        "options": ["a) go", "b) going", "c) went", "d) goes"],
-        "answer": "went"
-      },
-      {
-        
-      }
-]
+      "question": "Which sentence is grammatically correct?",
+      "options": [
+        "a) She don’t like coffee.",
+        "b) She doesn’t like coffee. ",
+        "c) She isn’t liking coffee.",
+        "d) She not like coffee."
+      ],
+      "answer": "She doesn’t like coffee."
+    },
+    {
+      "question": "Choose the correct past tense form:  'I ______ to the store yesterday.'",
+      "options": ["a) go", "b) going", "c) went", "d) goes"],
+      "answer": "went"
+    }
+    
+  ]
 }

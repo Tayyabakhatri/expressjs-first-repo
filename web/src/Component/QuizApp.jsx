@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const QuizApp = () => {
@@ -23,14 +23,13 @@ const QuizApp = () => {
   return (
     <>
       {quizdata.map((item, index) => (
-        <div key={index} >
+        <div key={index}>
           <div>{item.question}</div>
-          
-            <ul key={index}>
-              <li>{item.options}</li>
-            
-            </ul>
-          
+
+          <ul key={index}>
+            <li>{item.options}</li>
+          </ul>
+
           {/* <div>
       <ul>
         {item.options.map((option, optionIndex) => (
