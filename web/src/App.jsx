@@ -1,15 +1,12 @@
-
-import './App.css'
-import React from 'react'
-import QuizApp from './Component/QuizApp'
+import "./App.css";
+import React from "react";
+import QuizApp from "./Component/QuizApp";
 function App() {
-  
-
   return (
     <>
-    <QuizApp/>
+      <QuizApp />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
