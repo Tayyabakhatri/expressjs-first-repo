@@ -4,18 +4,37 @@
     {
       "question": "Which sentence is grammatically correct?",
       "options": [
-        "a) She don’t like coffee.",
-        "b) She doesn’t like coffee. ",
-        "c) She isn’t liking coffee.",
-        "d) She not like coffee."
+        "She don’t like coffee.",
+        "She doesn’t like coffee. ",
+        "She isn’t liking coffee.",
+        "She not like coffee."
       ],
       "answer": "She doesn’t like coffee."
     },
     {
       "question": "Choose the correct past tense form:  'I ______ to the store yesterday.'",
-      "options": ["a) go", "b) going", "c) went", "d) goes"],
+      "options": ["go", "going", "went", "goes"],
       "answer": "went"
+    },
+    {
+      "question": "Select the correct preposition: We have been living in this house ___ 2010.",
+      "options": ["since ", "for", "from", "at"],
+      "answer": "since"
+    },
+    {
+      "question": "Choose the correct article: I saw ___ elephant in the zoo.",
+      "options": ["a", "an", "the", "no article needed"],
+      "answer": "an"
+    },
+    {
+      "question": "Identify the correct sentence structure:",
+      "options": [
+        "They has finished their work.",
+        "They have finished their work. ",
+        "They finished has their work.",
+        "Finished they have their work."
+      ],
+      "answer":" They have finished their work. "
     }
-    
   ]
 }

@@ -4,12 +4,13 @@ import fs from "fs";
 import cors from 'cors'
 
 const app = express()
+app.use(express.json())
 const port = process.env.PORT || 3000
 
 //read data
-const data = JSON.parse(fs.readFileSync("./data.json", "utf8"));
-console.log(data);
 
+const data = JSON.parse(fs.readFileSync("./data.json", "utf8"));
+    console.log(data);
 
 app.use(cors())
 
@@ -22,8 +23,9 @@ app.use('/', express.static(path.join(__dirname, './web/dist')))
 app.get('/quiz-data', (req, res) => {
 
   try {
+    
     // send preloaded JSON data
-    res.send(data)
+    res.json(data)
     console.log(data);
   }
   catch (error) {
@@ -31,10 +33,12 @@ app.get('/quiz-data', (req, res) => {
   }
 })
 app.post('/quiz-data', (req, res) => {
+  console.log("received request",req.body);
+  
   res.send('hello')
 
 })
-  
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
