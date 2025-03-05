@@ -29,7 +29,9 @@ const QuizApp = () => {
     setScore((prevScore) => {
       const newScore =
         prevScore +
-        (selectedOption === quizdata[currentQuestion].answer ? prevScore + 1 : prevScore);
+        (selectedOption === quizdata[currentQuestion].answer
+          ? prevScore + 1
+          : prevScore);
       return newScore;
     });
   };
@@ -37,22 +39,6 @@ const QuizApp = () => {
   if (!quizdata || quizdata.length === 0) {
     return <div className="text-center mt-10 text-lg">Loading...</div>;
   }
-
-  // const Score = () => {
-  //   if (!selectedOption) {
-  //     console.log("please select an option");
-  //     return;
-  //   }
-  //   if (selectedOption === quizdata[currentQuestion].answer) {
-  //     setScore((prevScore) => prevScore + 1);
-  //   } else {
-  //     console.log("you are wrong");
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   console.log("Updated Score:", score);
-  // }, [score]); // ✅ Runs every time score changes
 
   return (
     <>
